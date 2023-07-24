@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kanban Board</h1>
+
+    <div class="lists">
+        <div class="list">
+            <div>Open</div>
+            <div class="listContent" id = 'open'></div>
+        </div>
+
+        <div class="list">
+            <div>Closed</div>
+            <div class="listContent" id = 'closed'></div>
+        </div>
+    </div>
+
+    <script>
+
+        const populateFields = () => {
+            const data = getFields()
+
+            console.log('populating')
+
+            data.forEach((item) => {
+                document.getElementById(item.status).innerHTML += 
+                `
+                <div class="listItem">${item.title}</div>
+                `
+                console.log(item.title)
+            })
+        }
+
+        const moveMode = () => {}
+
+        const getFields = () => {
+            console.log('getting data')
+            return [{
+                    status: 'open',
+                    title: 'Test 1'
+                },
+                {
+                    status: 'open',
+                    title: 'Test 2'
+                }]
+        }
+
+        populateFields()
+    </script>
+</body>
+</html>

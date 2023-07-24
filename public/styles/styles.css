@@ -1,0 +1,26 @@
+body {
+    background-color: aqua;
+}
+
+.lists{
+    display: flex;
+}
+
+.list {
+    height: 10rem;
+    width: 20%;
+    background-color: darkgray;
+
+    margin-right: 1rem;
+}
+
+.listContent {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.listItem {
+    background-color: pink;
+    color: red
+}
